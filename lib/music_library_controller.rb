@@ -55,6 +55,7 @@ class MusicLibraryController
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
+    
     input = gets.strip
 
     if artist = Artist.find_by_name(input)
@@ -62,10 +63,12 @@ class MusicLibraryController
         puts "#{i+1}. #{song.name} - #{song.genre.name}"
       }
     end
+    
   end
 
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
+    
     input = gets.strip
 
     if genre = Genre.find_by_name(input)
@@ -73,12 +76,16 @@ class MusicLibraryController
         puts "#{i+1}. #{song.artist.name} - #{song.name}"
       }
     end
-
+    
   end
 
   def play_song
     puts "Which song number would you like to play?"
+    
     input = gets.strip
+    if input.between?(1,list_songs.size)
+      
+    end
   end
 
 end
