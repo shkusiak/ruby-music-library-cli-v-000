@@ -85,6 +85,7 @@ class MusicLibraryController
     input = gets.strip
     if input.between?(1,Song.all.size)
       song = Song.all.sort{ |x,y| x.name <=> y.name}
+      puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
 
