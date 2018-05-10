@@ -84,7 +84,7 @@ class MusicLibraryController
 
     input = gets.strip
     #if input.between?(1,list_songs.size)
-
+    list_songs
     #end
   end
 
